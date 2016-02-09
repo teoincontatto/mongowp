@@ -1,0 +1,6 @@
+any## Fixing missing dependency for findbugs package found in original pom of com.google.code.findbugs:annotations
+any#/usr/bin/python3 /usr/share/java-utils/pom_editor.py pom_xpath_inject --recursive 'pom:dependencies[pom:dependency[pom:groupId[text()="com.google.code.findbugs"] and pom:artifactId[text()="annotations"]]]' '
+any#          <dependency>
+any#                <groupId>com.google.code.findbugs</groupId>
+any#                <artifactId>jsr305</artifactId>
+any#          </dependency>' "$pom" > /dev/null 2>&1 || true "Skip"
