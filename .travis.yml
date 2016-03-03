@@ -7,10 +7,6 @@ jdk:
 before_script:
 - export GIT_BRANCH=$TRAVIS_BRANCH
 
-branches:
-  except:
-    - rpm_package
-
 sudo: false
 
 before_deploy:
